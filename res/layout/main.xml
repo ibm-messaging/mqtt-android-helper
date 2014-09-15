@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--*******************************************************************************
+* Copyright (c) 2014 IBM Corp.
+*
+* All rights reserved. This program and the accompanying materials
+* are made available under the terms of the Eclipse Public License v1.0
+* and Eclipse Distribution License v1.0 which accompany this distribution.
+*
+* The Eclipse Public License is available at
+*   http://www.eclipse.org/legal/epl-v10.html
+* and the Eclipse Distribution License is available at
+*   http://www.eclipse.org/org/documents/edl-v10.php.
+*
+* Contributors: Allan Marube
+*
+*******************************************************************************-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical" android:weightSum="1">
+
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Client ID:"
+            android:id="@+id/textView"/>
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/clientId"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Server:"
+            android:id="@+id/textView3"/>
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/server"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Port:"
+            android:id="@+id/textView4"/>
+    <EditText
+            android:layout_width="123dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/port"/>
+    <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clean Session"
+            android:id="@+id/switchClean" android:checked="true"/>
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" >
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Connect"
+            android:id="@+id/button"
+            android:onClick="establishConnection"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Disconnect"
+            android:id="@+id/button2"
+            android:enabled="false"
+            android:onClick="disconnect"/>
+
+        </LinearLayout>
+    <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="pub/sub"
+            android:enabled="false"
+            android:id="@+id/button3"
+            android:onClick="startPubSub"
+            />
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/textView2"/>
+    <!--TextView
+            android:layout_width="wrap_content"
+            android:layout_height="4dp"
+            android:text="New Text"
+            android:id="@+id/textView5" android:layout_gravity="center_horizontal"/-->
+
+
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" >
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Logs:"
+            android:id="@+id/textView6"
+            android:focusable="false" android:textColorHighlight="@android:color/background_dark"
+            android:typeface="monospace"/>
+    <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clear Log"
+            android:id="@+id/clear"
+            android:onClick="clearLog"/>
+        </LinearLayout>
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:id="@+id/logInfo"
+            android:background="@drawable/rectangle"
+            android:maxLines = "100"
+            android:scrollbars = "vertical"
+            android:layout_weight="1.06"/>
+
+</LinearLayout>
+
